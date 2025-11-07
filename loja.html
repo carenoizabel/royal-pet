@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Royal Pet - Loja</title>
+
+  <style>
+    :root {
+      --royal-blue: #0d1b7e;
+      --gold: #d4af37;
+      --white: #ffffff;
+      --dark: #0b0f22;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: var(--white);
+      color: var(--dark);
+    }
+
+    /* Navbar */
+    .navbar {
+      background: var(--white);
+      border-bottom: 1px solid #eee;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      margin: 0 12px;
+      color: var(--royal-blue);
+      font-weight: 500;
+    }
+
+    .navbar a:hover {
+      color: var(--gold);
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--royal-blue);
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      color: var(--royal-blue);
+    }
+
+    /* Cards */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 5px 14px rgba(0,0,0,0.05);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+    }
+
+    /* Botões */
+    .btn-blue {
+      background: var(--royal-blue);
+      color: var(--white);
+      padding: 12px 24px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      margin: 5px;
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: var(--royal-blue);
+      padding: 12px 24px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      margin: 5px;
+    }
+
+    .btn-blue:hover {
+      opacity: 0.9;
+    }
+    .btn-gold:hover {
+      opacity: 0.9;
+    }
+
+    /* DOCUMENTOS */
+    .documentos {
+      padding: 80px 40px;
+      background: #fdfdfd;
+      text-align: center;
+    }
+
+    .documentos h2 {
+      font-size: 36px;
+      color: var(--royal-blue);
+      margin-bottom: 10px;
+    }
+
+    .documentos p {
+      font-size: 18px;
+      margin-bottom: 40px;
+      color: var(--dark);
+    }
+
+    .docs-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .doc-card {
+      background: var(--white);
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 5px 14px rgba(0,0,0,0.05);
+      transition: 0.3s;
+    }
+
+    .doc-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+    }
+
+    .doc-card h4 {
+      margin-bottom: 8px;
+      font-size: 22px;
+      color: var(--royal-blue);
+    }
+
+    /* FOOTER */
+    .footer {
+      background: var(--royal-blue);
+      color: var(--white);
+      padding: 24px;
+      margin-top: 60px;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .documentos {
+        padding: 40px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">Royal Pet</div>
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="servicos.html">Serviços</a>
+    <a href="loja.html">Loja</a>
+    <a href="login.html">Login</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Loja Pet</h1>
+  <p>Produtos selecionados para seu melhor amigo!</p>
+</section>
+
+<section class="cards">
+  <div class="card">
+    <h3>Ração Premium</h3>
+    <p>Ração completa para seu pet.</p>
+    <button class="btn-blue">Comprar</button>
+  </div>
+
+  <div class="card">
+    <h3>Brinquedos</h3>
+    <p>Diversão garantida.</p>
+    <button class="btn-blue">Comprar</button>
+  </div>
+</section>
+
+<!-- ✅ DOCUMENTOS DO PET -->
+<section class="documentos">
+  <h2>Documentos do Pet</h2>
+  <p>Envie, visualize e gerencie documentos do seu animal.</p>
+
+  <div class="docs-container">
+    <div class="doc-card">
+      <h4>Carteira de Vacinação</h4>
+      <p>Última atualização: 20/01/2025</p>
+      <button class="btn-blue">Visualizar</button>
+      <button class="btn-gold">Enviar Novo</button>
+    </div>
+
+    <div class="doc-card">
+      <h4>Exames</h4>
+      <p>Nenhum documento enviado</p>
+      <button class="btn-gold">Enviar</button>
+    </div>
+
+    <div class="doc-card">
+      <h4>Registro</h4>
+      <p>Documento obrigatório</p>
+      <button class="btn-blue">Visualizar</button>
+      <button class="btn-gold">Enviar Novo</button>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© 2025 Royal Pet — Todos os direitos reservados</p>
+</footer>
+
+</body>
+</html>

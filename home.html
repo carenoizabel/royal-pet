@@ -1,0 +1,244 @@
+<!-- Homepage -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Royal Pet - Home</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    :root {
+      --blue: #003DA5;
+      --blue-dark: #00255C;
+      --gold: #D4AF37;
+      --white: #ffffff;
+    }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: var(--white);
+      color: var(--blue-dark);
+    }
+    .navbar {
+      background: var(--white);
+      border-bottom: 1px solid #eee;
+      padding: 18px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+    }
+    .navbar a {
+      color: var(--blue-dark);
+      margin: 0 14px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .navbar a:hover {
+      color: var(--gold);
+    }
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--blue);
+    }
+    .hero {
+      text-align: center;
+      padding: 120px 20px;
+      background: var(--white);
+    }
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+      color: var(--blue);
+    }
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 32px;
+      color: var(--blue-dark);
+    }
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    .btn-gold {
+      background: var(--gold);
+      color: var(--blue-dark);
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .btn-gold:hover {
+      background: #c2992f;
+    }
+    .btn-blue {
+      background: var(--blue);
+      color: var(--white);
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .btn-blue:hover {
+      background: var(--blue-dark);
+    }
+  @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px;
+      }
+      .navbar nav a {
+        margin: 0 8px;
+      }
+      .hero {
+        padding: 60px 16px;
+      }
+      .hero h1 {
+        font-size: 32px;
+      }
+      .hero p {
+        font-size: 16px;
+      }
+      .buttons {
+        flex-direction: column;
+        gap: 12px;
+      }
+      .btn-gold, .btn-blue {
+        width: 100%;
+        text-align: center;
+      }
+      /* ========= FOOTER 100% VISÍVEL ========== */
+
+footer.footer {
+  background-color: #0A0F47;   /* Azul royal MUITO escuro */
+  color: #ffffff !important;
+  padding: 60px 40px;
+  margin-top: 80px;
+  border-top: 4px solid #d4af37;
+  width: 100%;
+  display: block;
+}
+
+.footer * {
+  color: #ffffff !important;    /* garanta que texto sempre aparece */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.ft-col {
+  min-width: 220px;
+}
+
+.footer h3 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #d4af37 !important;
+  margin-bottom: 10px;
+}
+
+.footer h4 {
+  font-size: 20px;
+  margin-bottom: 14px;
+  border-bottom: 2px solid #d4af37;
+  display: inline-block;
+  padding-bottom: 6px;
+  color: #ffffff !important;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 10px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #ffffff !important;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.footer a:hover {
+  color: #d4af37 !important;
+  padding-left: 6px;
+}
+
+.copy {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Royal Pet</div>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="servicos.html">Serviços</a>
+      <a href="loja.html">Loja</a>
+      <a href="login.html">Entrar</a>
+    </nav>
+  </header>
+  <section class="hero">
+    <h1>Seu Pet Feliz em Um Único Lugar</h1>
+    <p>Hotel, veterinário, banho & tosa e loja — tudo em um só lugar.</p>
+    <div class="buttons">
+      <a href="hotel.html" class="btn-gold">Reservar Hotel</a>
+      <a href="loja.html" class="btn-blue">Ir à Loja</a>
+    </div>
+  </section>
+  
+  <footer class="footer">
+  <div class="footer-content">
+    <div>
+      <h3>Royal Pet</h3>
+      <p>Cuidando com amor e excelência.</p>
+    </div>
+
+    <div>
+      <h4>Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="loja.html">Loja</a></li>
+        <li><a href="login.html">Entrar</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Contato</h4>
+      <p>Email: atendimentogeraladmroyalpetshop@royalpet.com</p>
+      <p>WhatsApp: (67) 3441-5005</p>
+    </div>
+  </div>
+
+  <p class="copy">© 2025 Royal Pet — Todos os direitos reservados</p>
+</footer>
+
+</body>
+</html>

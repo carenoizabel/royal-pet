@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Royal Pet - Serviços</title>
+
+  <style>
+    /* ======== VARIÁVEIS ======== */
+    :root {
+      --royal-blue: #0D1B7E;
+      --gold: #d4af37;
+      --white: #ffffff;
+      --bg-light: #f9f9f9;
+      --shadow: 0px 4px 15px rgba(0,0,0,0.2);
+    }
+
+    /* ======== RESET ======== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: var(--bg-light);
+      color: #333;
+    }
+
+    /* ======== NAVBAR ======== */
+    .navbar {
+      background: var(--royal-blue);
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--white);
+    }
+
+    .navbar .logo {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--gold);
+    }
+
+    .navbar nav a {
+      color: var(--white);
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .navbar nav a:hover {
+      color: var(--gold);
+    }
+
+    /* ======== HERO ======== */
+    .hero {
+      background: var(--royal-blue);
+      color: var(--white);
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero h1 {
+      font-size: 44px;
+      color: var(--gold);
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-top: 15px;
+      opacity: 0.9;
+    }
+
+    /* ======== CARDS ======== */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      padding: 60px;
+    }
+
+    .card {
+      background: var(--white);
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      transition: 0.3s;
+      border-bottom: 6px solid var(--gold);
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card h3 {
+      color: var(--royal-blue);
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 16px;
+      margin-bottom: 10px;
+      opacity: 0.8;
+    }
+
+    .price {
+      font-size: 22px;
+      color: var(--gold);
+      font-weight: 800;
+      margin-top: 10px;
+    }
+
+    /* ======== FOOTER ======== */
+    footer.footer {
+      background-color: #0A0F47;
+      color: #ffffff !important;
+      padding: 60px 40px;
+      margin-top: 80px;
+      border-top: 4px solid var(--gold);
+      width: 100%;
+      display: block;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .footer h3 {
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--gold);
+    }
+
+    .footer h4 {
+      font-size: 20px;
+      margin-bottom: 14px;
+      border-bottom: 2px solid var(--gold);
+      display: inline-block;
+      padding-bottom: 6px;
+    }
+
+    .footer ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer a {
+      text-decoration: none;
+      color: #ffffff !important;
+      transition: 0.3s;
+    }
+
+    .footer a:hover {
+      color: var(--gold) !important;
+      padding-left: 6px;
+    }
+
+    .copy {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 14px;
+      opacity: 0.7;
+    }
+
+    /* RESPONSIVO */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="logo">Royal Pet</div>
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="servicos.html">Serviços</a>
+    <a href="loja.html">Loja</a>
+    <a href="login.html">Entrar</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Nossos Serviços</h1>
+  <p>Cuidado completo para seu pet com profissionais experientes.</p>
+</section>
+
+<section class="cards">
+  <div class="card">
+    <h3>Hotel Pet</h3>
+    <p>Acomodações confortáveis e monitoramento 24h.</p>
+    <p class="price">R$ 100,00 / diária</p>
+  </div>
+
+  <div class="card">
+    <h3>Veterinário</h3>
+    <p>Consultas, vacinas e exames especializados.</p>
+    <p class="price">R$ 160,00 / consulta</p>
+  </div>
+
+  <div class="card">
+    <h3>Banho & Tosa</h3>
+    <p>Beleza e higiene para seu pet com carinho.</p>
+    <p class="price">a partir de R$ 60,00 </p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-content">
+    <div>
+      <h3>Royal Pet</h3>
+      <p>Cuidando com amor e excelência.</p>
+    </div>
+
+    <div>
+      <h4>Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="loja.html">Loja</a></li>
+        <li><a href="login.html">Entrar</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Contato</h4>
+      <p>Email: contato@royalpet.com</p>
+      <p>WhatsApp: (XX) XXXXX-XXXX</p>
+    </div>
+  </div>
+
+  <p class="copy">© 2025 Royal Pet — Todos os direitos reservados</p>
+</footer>
+
+</body>
+</html>

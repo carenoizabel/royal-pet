@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Royal Pet - Dashboard</title>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+
+  body {
+    display: flex;
+    background: #f4f4f4;
+  }
+
+  /* SIDEBAR */
+  .sidebar {
+    width: 260px;
+    background: #1d2d50;
+    color: white;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+  }
+
+  .sidebar h2 {
+    text-align: center;
+    color: #daa520;
+    margin-bottom: 25px;
+  }
+
+  .sidebar a {
+    display: block;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    transition: .3s;
+  }
+
+  .sidebar a:hover,
+  .sidebar a.active {
+    background: #163570;
+    color: #daa520;
+  }
+
+  /* MAIN CONTENT */
+  .content {
+    margin-left: 260px;
+    padding: 25px;
+    width: calc(100% - 260px);
+  }
+
+  .title {
+    font-size: 26px;
+    color: #1d2d50;
+    margin-bottom: 15px;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  /* TABELAS */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  table th {
+    background: #1d2d50;
+    color: white;
+    padding: 12px;
+  }
+
+  table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .btn {
+    padding: 6px 12px;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .edit { background: #daa520; }
+  .delete { background: #b30000; }
+
+  /* PERFIL */
+  .profile-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .profile-box input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: 1px solid #aaa;
+  }
+
+  .save {
+    background: #1d2d50;
+    padding: 10px;
+    border-radius: 6px;
+  }
+
+</style>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+  <h2>Royal Pet</h2>
+  <a href="#" class="active" onclick="showSection('pedidos')">Pedidos</a>
+  <a href="#" onclick="showSection('agendamentos')">Agendamentos</a>
+  <a href="#" onclick="showSection('perfil')">Perfil</a>
+  <a href="login.html">Sair</a>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="content">
+
+  <!-- PEDIDOS -->
+  <div id="pedidos" class="section">
+    <h1 class="title">Pedidos</h1>
+
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Produto</th>
+        <th>Data</th>
+        <th>Status</th>
+        <th>Ações</th>
+      </tr>
+      <tbody id="pedidosTable"></tbody>
+    </table>
+  </div>
+
+  <!-- AGENDAMENTOS -->
+  <div id="agendamentos" class="section hidden">
+    <h1 class="title">Agendamentos</h1>
+
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Serviço</th>
+        <th>Data</th>
+        <th>Ações</th>
+      </tr>
+      <tbody id="agendamentosTable"></tbody>
+    </table>
+  </div>
+
+  <!-- PERFIL -->
+  <div id="perfil" class="section hidden">
+    <h1 class="title">Perfil</h1>
+
+    <div class="profile-box">
+      <label>Nome</label>
+      <input type="text" value="Recepção - Pet Royal">
+      <label>Email</label>
+      <input type="email" value="recepcaopetroyal@royalpet.com">
+      <button class="btn save">Salvar</button>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  function showSection(id) {
+    document.querySelectorAll(".section").forEach(sec => sec.classList.add("hidden"));
+    document.getElementById(id).classList.remove("hidden");
+
+    document.querySelectorAll(".sidebar a").forEach(a => a.classList.remove("active"));
+    event.target.classList.add("active");
+  }
+
+  // DADOS SIMULADOS
+  const pedidos = [
+    { id: 1, produto: "Ração Premium", data: "12/12/2025", status: "Enviado" },
+    { id: 2, produto: "Coleira Ajustável", data: "10/12/2025", status: "Entregue" }
+  ];
+
+  const agendamentos = [
+    { id: 1, servico: "Banho & Tosa", data: "15/12/2025" },
+    { id: 2, servico: "Consulta Veterinária", data: "20/12/2025" }
+  ];
+
+  function loadTables() {
+    let pedidosHTML = "";
+    pedidos.forEach(p => {
+      pedidosHTML += `
+        <tr>
+          <td>${p.id}</td>
+          <td>${p.produto}</td>
+          <td>${p.data}</td>
+          <td>${p.status}</td>
+          <td>
+            <button class="btn edit">Editar</button>
+            <button class="btn delete">Excluir</button>
+          </td>
+        </tr>
+      `;
+    });
+    document.getElementById("pedidosTable").innerHTML = pedidosHTML;
+
+    let agHTML = "";
+    agendamentos.forEach(a => {
+      agHTML += `
+        <tr>
+          <td>${a.id}</td>
+          <td>${a.servico}</td>
+          <td>${a.data}</td>
+          <td>
+            <button class="btn edit">Editar</button>
+            <button class="btn delete">Excluir</button>
+          </td>
+        </tr>
+      `;
+    });
+    document.getElementById("agendamentosTable").innerHTML = agHTML;
+  }
+
+  loadTables();
+</script>
+
+</body>
+</html>
