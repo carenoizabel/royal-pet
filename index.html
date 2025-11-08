@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Royal Pet - Home</title>
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="styles.css" />
   <style>
     :root {
       --blue: #003DA5;
@@ -14,12 +13,14 @@
       --gold: #D4AF37;
       --white: #ffffff;
     }
+
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
       background: var(--white);
       color: var(--blue-dark);
     }
+
     .navbar {
       background: var(--white);
       border-bottom: 1px solid #eee;
@@ -29,40 +30,48 @@
       align-items: center;
       font-weight: 600;
     }
+
     .navbar a {
       color: var(--blue-dark);
       margin: 0 14px;
       text-decoration: none;
       transition: 0.3s;
     }
+
     .navbar a:hover {
       color: var(--gold);
     }
+
     .logo {
       font-size: 28px;
       font-weight: 700;
       color: var(--blue);
     }
+
     .hero {
       text-align: center;
       padding: 120px 20px;
       background: var(--white);
     }
+
     .hero h1 {
       font-size: 48px;
       margin-bottom: 10px;
       color: var(--blue);
     }
+
     .hero p {
       font-size: 20px;
       margin-bottom: 32px;
       color: var(--blue-dark);
     }
+
     .buttons {
       display: flex;
       justify-content: center;
       gap: 20px;
     }
+
     .btn-gold {
       background: var(--gold);
       color: var(--blue-dark);
@@ -72,9 +81,11 @@
       text-decoration: none;
       transition: 0.3s;
     }
+
     .btn-gold:hover {
       background: #c2992f;
     }
+
     .btn-blue {
       background: var(--blue);
       color: var(--white);
@@ -84,113 +95,174 @@
       text-decoration: none;
       transition: 0.3s;
     }
+
     .btn-blue:hover {
       background: var(--blue-dark);
     }
-  @media (max-width: 768px) {
+
+    /* ========= NOVA SEÇÃO "CONHEÇA NOSSA EMPRESA" ========= */
+    .empresa-destaque {
+      background: linear-gradient(180deg, #f9fafc 0%, #eef3fb 100%);
+      padding: 100px 40px;
+      text-align: left;
+    }
+
+    .empresa-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .empresa-conteudo {
+      flex: 1 1 520px;
+    }
+
+    .empresa-conteudo h1 {
+      font-size: 2.8rem;
+      color: var(--blue);
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .empresa-texto {
+      font-size: 1.1rem;
+      color: var(--blue-dark);
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+
+    .botao-dourado {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--blue-dark);
+      padding: 14px 30px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .botao-dourado:hover {
+      background: #c2992f;
+      transform: translateY(-3px);
+    }
+
+    .botao-azul {
+      display: inline-block;
+      background: var(--blue);
+      color: var(--white);
+      padding: 14px 30px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .botao-azul:hover {
+      background: var(--blue-dark);
+      transform: translateY(-3px);
+    }
+
+    .empresa-social p {
+      font-size: 1rem;
+      margin-bottom: 12px;
+      color: var(--blue-dark);
+    }
+
+    .teste-tag {
+      background: rgba(0, 61, 165, 0.1);
+      color: var(--blue);
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 0.9rem;
+    }
+
+    .empresa-imagem {
+      flex: 1 1 400px;
+      text-align: center;
+    }
+
+    .empresa-imagem img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
+    }
+
+    /* ========= RESPONSIVO ========= */
+    @media (max-width: 768px) {
       .navbar {
         flex-direction: column;
         gap: 12px;
         padding: 16px;
       }
+
       .navbar nav a {
         margin: 0 8px;
       }
+
       .hero {
         padding: 60px 16px;
       }
+
       .hero h1 {
         font-size: 32px;
       }
+
       .hero p {
         font-size: 16px;
       }
+
       .buttons {
         flex-direction: column;
         gap: 12px;
       }
-      .btn-gold, .btn-blue {
+
+      .btn-gold,
+      .btn-blue {
         width: 100%;
         text-align: center;
       }
+
+      .empresa-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .empresa-conteudo h1 {
+        font-size: 2rem;
+      }
+
+      .empresa-texto {
+        font-size: 1rem;
+      }
+
+      .empresa-imagem {
+        margin-top: 30px;
+      }
+
       /* ========= FOOTER 100% VISÍVEL ========== */
+      footer.footer {
+        background-color: #0A0F47;
+        color: #ffffff !important;
+        padding: 60px 40px;
+        margin-top: 80px;
+        border-top: 4px solid #d4af37;
+        width: 100%;
+        display: block;
+      }
 
-footer.footer {
-  background-color: #0A0F47;   /* Azul royal MUITO escuro */
-  color: #ffffff !important;
-  padding: 60px 40px;
-  margin-top: 80px;
-  border-top: 4px solid #d4af37;
-  width: 100%;
-  display: block;
-}
+      .footer * {
+        color: #ffffff !important;
+      }
 
-.footer * {
-  color: #ffffff !important;    /* garanta que texto sempre aparece */
-}
-
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 40px;
-}
-
-.ft-col {
-  min-width: 220px;
-}
-
-.footer h3 {
-  font-size: 26px;
-  font-weight: 700;
-  color: #d4af37 !important;
-  margin-bottom: 10px;
-}
-
-.footer h4 {
-  font-size: 20px;
-  margin-bottom: 14px;
-  border-bottom: 2px solid #d4af37;
-  display: inline-block;
-  padding-bottom: 6px;
-  color: #ffffff !important;
-}
-
-.footer ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer ul li {
-  margin-bottom: 10px;
-}
-
-.footer a {
-  text-decoration: none;
-  color: #ffffff !important;
-  transition: 0.3s;
-  font-weight: 500;
-}
-
-.footer a:hover {
-  color: #d4af37 !important;
-  padding-left: 6px;
-}
-
-.copy {
-  text-align: center;
-  margin-top: 40px;
-  font-size: 14px;
-  opacity: 0.7;
-}
-
-@media (max-width: 768px) {
-  .footer-content {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
     }
   </style>
 </head>
@@ -204,6 +276,7 @@ footer.footer {
       <a href="login.html">Entrar</a>
     </nav>
   </header>
+
   <section class="hero">
     <h1>Seu Pet Feliz em Um Único Lugar</h1>
     <p>Hotel, veterinário, banho & tosa e loja — tudo em um só lugar.</p>
@@ -213,46 +286,54 @@ footer.footer {
     </div>
   </section>
 
-   <section class="hero">
-    <h1>Conheça nossa empresa</h1>
-    <p>Plano de negócios</p>
-    <div class="buttons">
-      <a href="planonegocios.pdf" class="btn-gold">Acesse o documento</a>
-    </div>
-     <p>Redes Sociais - em fase de teste</p>
-    <div class="buttons">
-      <a href="#" class="btn-gold">Conheça nosso Instagram</a>
+  <section class="empresa-destaque">
+    <div class="empresa-container">
+      <div class="empresa-conteudo">
+        <h1>Conheça Nossa Empresa</h1>
+        <p class="empresa-texto">
+          A Royal Pet nasceu com o propósito de oferecer amor, cuidado e excelência aos pets e seus donos. 
+          Aqui, cada serviço é pensado para garantir o máximo conforto, bem-estar e carinho aos nossos melhores amigos.
+        </p>
+
+        <a href="planonegocios.pdf" class="botao-dourado">📘 Acesse o Plano de Negócios</a>
+
+        <div class="empresa-social">
+          <p>🐾 Redes Sociais <span class="teste-tag">(em fase de teste)</span></p>
+          <a href="#" class="botao-azul"> Conheça nosso Instagram</a>
+        </div>
+      </div>
+
+      <div class="empresa-imagem">
+        <img src="empresa.png" alt="Equipe Royal Pet">
+      </div>
     </div>
   </section>
-  
+
   <footer class="footer">
-  <div class="footer-content">
-    <div>
-      <h3>Royal Pet</h3>
-      <p>Cuidando com amor e excelência.</p>
+    <div class="footer-content">
+      <div>
+        <h3>Royal Pet</h3>
+        <p>Cuidando com amor e excelência.</p>
+      </div>
+
+      <div>
+        <h4>Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="servicos.html">Serviços</a></li>
+          <li><a href="loja.html">Loja</a></li>
+          <li><a href="login.html">Entrar</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contato</h4>
+        <p>Email: atendimentogeraladmroyalpetshop@royalpet.com</p>
+        <p>WhatsApp: (67) 3441-5005</p>
+      </div>
     </div>
 
-    <div>
-      <h4>Links</h4>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="servicos.html">Serviços</a></li>
-        <li><a href="loja.html">Loja</a></li>
-        <li><a href="login.html">Entrar</a></li>
-      </ul>
-    </div>
-
-    <div>
-      <h4>Contato</h4>
-      <p>Email: atendimentogeraladmroyalpetshop@royalpet.com</p>
-      <p>WhatsApp: (67) 3441-5005</p>
-    </div>
-  </div>
-
-  <p class="copy">© 2025 Royal Pet — Todos os direitos reservados</p>
-</footer>
-
+    <p class="copy">© 2025 Royal Pet — Todos os direitos reservados</p>
+  </footer>
 </body>
 </html>
-
-
